@@ -8,8 +8,8 @@ Bundler.require(*Rails.groups)
 
 def set_locale_config_and_timezone
   config.time_zone = 'Brasilia'
-  config.i18n.load_path += Dir[Rails.root.joins('config', 'locales', '**/*.{rb,yml}').to_s]
-  config.i18n.avaliable_locales = ['pt-BR']
+  config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/*.{rb,yml}').to_s]
+  config.i18n.available_locales = ['pt-BR']
   config.i18n.default_locale = 'pt-BR'
 end
 
