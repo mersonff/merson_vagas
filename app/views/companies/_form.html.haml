@@ -4,6 +4,8 @@
   .mb-3
     = f.input :url
   .mb-3
+    = image_tag(url_for(@company.logo), class: 'company-logo') unless @company.new_record? && !@company.logo.nil?
+  .mb-3
     = f.input :logo, input_html: {class: 'form-control'}
 
   = f.button :submit, class: 'btn btn-primary'
